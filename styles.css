@@ -62,7 +62,7 @@ body {
   font-weight: 600;
 }
 
-.container .trial form {
+.container .trial .form {
   background-color: white;
   padding: 2.25rem;
   margin-top: 1.5rem;
@@ -70,16 +70,16 @@ body {
   position: relative;
   box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
 }
-.container .trial form fieldset:first-of-type {
+.container .trial .form fieldset:first-of-type {
   margin-top: unset;
 }
-.container .trial form fieldset {
+.container .trial .form fieldset {
   margin-top: 1.25rem;
   border: none;
   position: relative;
 }
-.container .trial form input,
-.container .trial form #submit {
+.container .trial .form input,
+.container .trial .form #submit {
   width: 100%;
   font-weight: 700;
   color: var(--dark-blue);
@@ -88,10 +88,10 @@ body {
   border-radius: 5px;
   border: 1px solid var(--grayish-blue);
 }
-.container .trial form input::placeholder {
+.container .trial .form input::placeholder {
   font-weight: 600;
 }
-.container .trial form fieldset .icon::after {
+.container .trial .form fieldset .icon::after {
   content: "";
   background: url(images/icon-error.svg) no-repeat;
   width: 25px;
@@ -99,13 +99,13 @@ body {
   position: absolute;
   top: 50%;
   right: 3%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   display: none;
 }
-.container .trial form fieldset .icon.show::after{
-    display: block;
+.container .trial .form fieldset .icon.show::after {
+  display: block;
 }
-.container .trial form #submit {
+.container .trial .form #submit {
   background-color: var(--green);
   margin-top: 1.25rem;
   color: white;
@@ -118,22 +118,24 @@ body {
   border: none;
   box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.15);
 }
-
-.container .trial form #terms {
+.container .trial .form #submit:hover {
+  opacity: 0.7;
+}
+.container .trial .form #terms {
   color: var(--grayish-blue);
   font-size: 0.75rem;
   text-align: center;
 }
 
-.container .trial form #terms span {
+.container .trial .form #terms span {
   color: var(--red);
   font-weight: 600;
 }
-.container .trial form input:focus {
+.container .trial .form input:focus {
   border-color: var(--blue);
 }
 
-form .errorMessage {
+.form .errorMessage {
   text-align: right;
   font-size: 0.75rem;
   color: var(--red);
@@ -141,12 +143,15 @@ form .errorMessage {
   font-style: italic;
   display: none;
 }
-form .errorMessage.show {
+.form .errorMessage.show {
   display: block;
 }
-.container .trial form .showError {
+.container .trial .form fieldset .showError {
   border: 2px solid var(--red);
 }
-.container .trial form .showError::placeholder {
+.container .trial .form fieldset #email.showError::placeholder {
+  color: var(--red);
+}
+.container .trial .form .showError::placeholder {
   color: transparent;
 }
